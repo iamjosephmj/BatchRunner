@@ -26,6 +26,7 @@ package me.iamjosephmj.batchrunner
 
 import org.junit.*
 import org.junit.runner.RunWith
+import java.io.PrintStream
 import kotlin.properties.Delegates
 
 @RunWith(BatchRunner::class)
@@ -356,6 +357,7 @@ class BatchRunnerUnitTest {
         @BeforeClass
         @JvmStatic
         fun beforeClass() {
+            System.setOut(System.out)
             println("start = ${System.currentTimeMillis()}")
         }
     }
