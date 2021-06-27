@@ -69,7 +69,7 @@ open class BatchRunner(klass: Class<*>) :
         runBlocking {
             val jobs: List<Job> = testMethods.map { method ->
                 // 64 threads will be forked
-                launch(context = Dispatchers.IO) {
+                launch(context = Dispatchers.Default) {
                     invokeTestMethod(method, notifier)
                 }
             }
