@@ -1,0 +1,66 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ main,develop ]
+  pull_request:
+    branches: [ main,develop ]
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Lint with Gradle
+        run: ./gradlew batchrunner:lint
+
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Clean with Gradle
+        run: ./gradlew clean
+      - name: Assemble with Gradle
+        run: ./gradlew batchrunner:assemble
+
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Clean with Gradle
+        run: ./gradlew clean
+      - name: Build with Gradle
+        run: ./gradlew batchrunner:build
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: IntegrationTestsMoshi
+        run: ./gradlew test batchrunner"
