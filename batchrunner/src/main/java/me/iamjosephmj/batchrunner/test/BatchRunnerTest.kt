@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package me.iamjosephmj.batchrunner
+package me.iamjosephmj.batchrunner.test
 
 import org.junit.AfterClass
 import org.junit.Before

@@ -47,13 +47,11 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.5.0")
 
-    implementation("androidx.test.ext:junit:1.1.2")
+    implementation("junit:junit:4.13.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
 
-    testImplementation("androidx.test.ext:junit:1.1.2")
-
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
+    testImplementation("junit:junit:4.13.2")
 
 
 }

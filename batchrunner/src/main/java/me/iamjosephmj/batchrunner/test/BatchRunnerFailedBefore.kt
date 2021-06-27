@@ -22,16 +22,11 @@
  * SOFTWARE.
  */
 
-package me.iamjosephmj.batchrunner
+package me.iamjosephmj.batchrunner.test
 
-class InitializationError(private val fErrors: List<Throwable?>? = null) : Exception() {
-    val serialVersionUID = 1L
-
-    constructor(vararg errors: Throwable?) : this(listOf(*errors))
-
-    constructor(string: String?) : this(Exception(string))
-
-    fun getCauses(): List<Throwable?>? {
-        return fErrors
+class BatchRunnerFailedBefore : Exception() {
+    companion object {
+        private const val serialVersionUID = 1L
     }
 }
+
