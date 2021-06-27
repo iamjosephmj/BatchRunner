@@ -24,9 +24,7 @@
 
 package me.iamjosephmj.batchrunner
 
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
+import org.junit.*
 import org.junit.runner.RunWith
 import kotlin.properties.Delegates
 
@@ -348,4 +346,17 @@ class BatchRunnerUnitTest {
 
     }
 
+    companion object {
+        @AfterClass
+        @JvmStatic
+        fun afterClass() {
+            println("end = ${System.currentTimeMillis()}")
+        }
+
+        @BeforeClass
+        @JvmStatic
+        fun beforeClass() {
+            println("start = ${System.currentTimeMillis()}")
+        }
+    }
 }

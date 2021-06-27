@@ -58,7 +58,7 @@ open class BatchRunner(klass: Class<*>) :
     }
 
     override fun run(notifier: RunNotifier) {
-        BatchRunnerClassRoadie(notifier, runnerTestClass, testClassObject, description) {
+        BatchRunnerClassRoadie(notifier, runnerTestClass, description) {
             runMethods(notifier)
         }.runProtected()
 
@@ -69,7 +69,7 @@ open class BatchRunner(klass: Class<*>) :
         runBlocking {
             val jobs: List<Job> = testMethods.map { method ->
                 // 64 threads will be forked
-                launch(context = Dispatchers.IO) {
+                launch(context = Dispatchers.Default) {
                     invokeTestMethod(method, notifier)
                 }
             }

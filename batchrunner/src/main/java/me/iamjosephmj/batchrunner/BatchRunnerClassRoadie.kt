@@ -33,7 +33,6 @@ import java.lang.reflect.InvocationTargetException
 open class BatchRunnerClassRoadie(
     private var notifier: RunNotifier,
     private var runnerTestClass: BatchRunnerTest,
-    private var testClassObject: Any,
     private var description: Description,
     private val runnable: Runnable,
 ) {
@@ -62,7 +61,7 @@ open class BatchRunnerClassRoadie(
             try {
                 val befores = runnerTestClass.getBefores()
                 for (before in befores) {
-                    before.invoke(testClassObject)
+                    before.invoke(null)
                 }
             } catch (e: InvocationTargetException) {
                 throw e.targetException
@@ -79,7 +78,7 @@ open class BatchRunnerClassRoadie(
         val afters = runnerTestClass.getAfters()
         for (after in afters) {
             try {
-                after.invoke(testClassObject)
+                after.invoke(null)
             } catch (e: InvocationTargetException) {
                 addFailure(e.targetException)
             } catch (e: Throwable) {
