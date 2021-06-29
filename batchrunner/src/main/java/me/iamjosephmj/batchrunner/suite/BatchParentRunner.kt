@@ -34,16 +34,17 @@ import java.util.*
  * handle annotated [ClassRule]s, create a composite
  * [Description], and run children sequentially.
  *
- * @since 4.5
+ * @author Joseph James.
  */
-abstract class BatchParentRunner<T> protected constructor(testClass: Class<*>?) : Runner(), Filterable,
+abstract class BatchParentRunner<T> protected constructor(testClass: Class<*>?) : Runner(),
+    Filterable,
     Sortable {
     private val childrenLock = Any()
 
     /**
      * Returns a [TestClass] object wrapping the class to be executed.
      */
-    val testClass: TestClass
+    private val testClass: TestClass
 
     // Guarded by childrenLock
     @Volatile
@@ -303,17 +304,19 @@ abstract class BatchParentRunner<T> protected constructor(testClass: Class<*>?) 
         return testClass.annotations
     }
 
-    //
-    // Implementation of Runner
-    //
+    /**
+     * Implementation of Runner
+     */
     override fun getDescription(): Description {
         val description = Description.createSuiteDescription(
             getName(),
             *getRunnerAnnotations()
         )
-        for (child in getFilteredChildren()!!) {
+        getFilteredChildren()?.forEach { child ->
             description.addChild(describeChild(child))
+
         }
+
         return description
     }
 
@@ -403,7 +406,7 @@ abstract class BatchParentRunner<T> protected constructor(testClass: Class<*>?) 
     }
 
     companion object {
-        private val VALIDATORS = Arrays.asList(
+        private val VALIDATORS = listOf(
             AnnotationsValidator(), PublicClassValidator()
         )
     }

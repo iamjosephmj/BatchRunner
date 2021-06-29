@@ -19,7 +19,7 @@ import kotlin.reflect.KClass
  * with `@RunWith(Suite.class)` and `@SuiteClasses({TestClass1.class, ...})`.
  * When you run this class, it will run all the tests in all the suite classes.
  *
- * @since 4.0
+ * @author Joseph James
  */
 open class BatchSuite protected constructor(klass: Class<*>?, runners: List<Runner>) :
     BatchParentRunner<Runner>(klass) {
