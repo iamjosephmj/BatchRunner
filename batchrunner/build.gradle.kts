@@ -49,13 +49,13 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 groupId = "me.iamjosephmj"
-                artifactId = "batch-runner"
+                artifactId = "batchrunner"
                 version = "1.0.0"
                 artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
             }
             create<MavenPublication>("debug") {
                 groupId = "me.iamjosephmj"
-                artifactId = "batch-runner"
+                artifactId = "batchrunner"
                 version = "1.0.0"
                 artifact("$buildDir/outputs/aar/${artifactId}-debug.aar")
             }
