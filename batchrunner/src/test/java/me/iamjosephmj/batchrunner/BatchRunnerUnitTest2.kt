@@ -24,12 +24,13 @@
 
 package me.iamjosephmj.batchrunner
 
+import me.iamjosephmj.batchrunner.test.BatchRunner
 import org.junit.*
 import org.junit.runner.RunWith
 import kotlin.properties.Delegates
 
 @RunWith(BatchRunner::class)
-class BatchRunnerUnitTest {
+class BatchRunnerUnitTest2 {
 
     var delay by Delegates.notNull<Long>()
     private val assertionExpression = true
@@ -41,302 +42,302 @@ class BatchRunnerUnitTest {
     }
 
     @Test
-    fun test_1() {
+    fun test_B_1() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_2() {
+    fun test_B_2() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_3() {
+    fun test_B_3() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_4() {
+    fun test_B_4() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_5() {
+    fun test_B_5() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_6() {
+    fun test_B_6() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_7() {
+    fun test_B_7() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_8() {
+    fun test_B_8() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_9() {
+    fun test_B_9() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_10() {
+    fun test_B_10() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_11() {
+    fun test_B_11() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_12() {
+    fun test_B_12() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_13() {
+    fun test_B_13() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_14() {
+    fun test_B_14() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_15() {
+    fun test_B_15() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_16() {
+    fun test_B_16() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_17() {
+    fun test_B_17() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_18() {
+    fun test_B_18() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_19() {
+    fun test_B_19() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_20() {
+    fun test_B_20() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_21() {
+    fun test_B_21() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_22() {
+    fun test_B_22() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_23() {
+    fun test_B_23() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_24() {
+    fun test_B_24() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_25() {
+    fun test_B_25() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_26() {
+    fun test_B_26() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_27() {
+    fun test_B_27() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_28() {
+    fun test_B_28() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_29() {
+    fun test_B_29() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_30() {
+    fun test_B_30() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_31() {
+    fun test_B_31() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_32() {
+    fun test_B_32() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_33() {
+    fun test_B_33() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_34() {
+    fun test_B_34() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_35() {
+    fun test_B_35() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_36() {
+    fun test_B_36() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_37() {
+    fun test_B_37() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_38() {
+    fun test_B_38() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_39() {
+    fun test_B_39() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_40() {
+    fun test_B_40() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
 
     @Test
-    fun test_41() {
+    fun test_B_41() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_42() {
+    fun test_B_42() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_43() {
+    fun test_B_43() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_44() {
+    fun test_B_44() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_45() {
+    fun test_B_45() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_46() {
+    fun test_B_46() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_47() {
+    fun test_B_47() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_48() {
+    fun test_B_48() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_49() {
+    fun test_B_49() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }
 
     @Test
-    fun test_50() {
+    fun test_B_50() {
         Thread.sleep(delay)
         assert(assertionExpression)
     }

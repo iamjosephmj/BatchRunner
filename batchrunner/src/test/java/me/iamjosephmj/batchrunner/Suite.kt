@@ -1,6 +1,5 @@
 /*
  * MIT License
- *
  * Copyright (c) 2021 Joseph James
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,14 +23,13 @@
 
 package me.iamjosephmj.batchrunner
 
-class InitializationError(private val fErrors: List<Throwable?>? = null) : Exception() {
-    val serialVersionUID = 1L
+import me.iamjosephmj.batchrunner.suite.BatchSuite
+import org.junit.runner.RunWith
 
-    constructor(vararg errors: Throwable?) : this(listOf(*errors))
 
-    constructor(string: String?) : this(Exception(string))
-
-    fun getCauses(): List<Throwable?>? {
-        return fErrors
-    }
-}
+@RunWith(BatchSuite::class)
+@BatchSuite.SuiteClasses(
+    BatchRunnerUnitTest1::class,
+    BatchRunnerUnitTest2::class
+)
+class BatchSuiteRunner
