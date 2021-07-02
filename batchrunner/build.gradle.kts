@@ -4,7 +4,10 @@ plugins {
 
     id("kotlin-android")
 
+    `maven-publish`
 }
+
+
 
 android {
     compileSdk = 30
@@ -41,11 +44,29 @@ android {
     }
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.iamjosephmj"
+                artifactId = "batch-runner"
+                version = "1.0.0"
+            }
+            create<MavenPublication>("debug") {
+                groupId = "com.github.iamjosephmj"
+                artifactId = "batch-runner"
+                version = "1.0.0"
+            }
+        }
+    }
+}
+
+
 dependencies {
 
     implementation("org.jetbrains.kotlin:kotlin-reflect:${Dependencies.reflect}")
 
-    implementation("androidx.core:core-ktx:1.5.0")
+    implementation("androidx.core:core-ktx:1.6.0")
 
     implementation("junit:junit:4.13.2")
 
