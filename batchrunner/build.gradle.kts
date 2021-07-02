@@ -4,7 +4,7 @@ plugins {
 
     id("kotlin-android")
 
-    `maven-publish`
+    id("maven-publish")
 }
 
 
