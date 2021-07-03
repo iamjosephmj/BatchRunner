@@ -44,20 +44,22 @@ android {
     }
 }
 
+
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
+                from(components.getByName("release"))
                 groupId = "me.iamjosephmj"
                 artifactId = "batchrunner"
                 version = "1.0.0"
-                artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
+
             }
             create<MavenPublication>("debug") {
+                from(components.getByName("debug"))
                 groupId = "me.iamjosephmj"
                 artifactId = "batchrunner"
                 version = "1.0.0"
-                artifact("$buildDir/outputs/aar/${artifactId}-debug.aar")
             }
         }
     }
