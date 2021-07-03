@@ -1,21 +1,18 @@
 plugins {
-
     id("com.android.library")
-
     id("kotlin-android")
-
     id("maven-publish")
 }
 
 
 
 android {
-    compileSdk = 30
-    buildToolsVersion = "30.0.3"
+    compileSdk = App.compileSDK
+    buildToolsVersion = App.buildVersion
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 30
+        minSdk = App.minSDK
+        targetSdk = App.targetSDK
     }
 
     buildTypes {
@@ -48,18 +45,18 @@ android {
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("release") {
-                from(components.getByName("release"))
-                groupId = "me.iamjosephmj"
-                artifactId = "batchrunner"
-                version = "1.0.0"
+            create<MavenPublication>(Jitpack.release) {
+                from(components.getByName(Jitpack.release))
+                groupId = Jitpack.groupId
+                artifactId = Jitpack.artifactId
+                version = Jitpack.version
 
             }
-            create<MavenPublication>("debug") {
-                from(components.getByName("debug"))
-                groupId = "me.iamjosephmj"
-                artifactId = "batchrunner"
-                version = "1.0.0"
+            create<MavenPublication>(Jitpack.debug) {
+                from(components.getByName(Jitpack.debug))
+                groupId = Jitpack.groupId
+                artifactId = Jitpack.artifactId
+                version = Jitpack.version
             }
         }
     }
@@ -67,16 +64,5 @@ afterEvaluate {
 
 
 dependencies {
-
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${Dependencies.reflect}")
-
-    implementation("androidx.core:core-ktx:1.6.0")
-
-    implementation("junit:junit:4.13.2")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
-
-    testImplementation("junit:junit:4.13.2")
-
-
+    getBatchDependencies()
 }
