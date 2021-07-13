@@ -1,4 +1,4 @@
-![BatchRunner](https://github.com/iamjosephmj/Raccoon/blob/main/media/batch.png)
+![BatchRunner](https://github.com/iamjosephmj/BatchRunner/blob/develop/media/batch.png)
 
 
 # BatchRunner
