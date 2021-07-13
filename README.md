@@ -67,3 +67,74 @@ dependencies {
     implementation("com.github.iamjosephmj:BatchRunner:1.0.0")
 }
 ```
+
+## Integration
+
+### For UnitTests Classes
+
+```kotlin
+
+@RunWith(BatchRunner::class)
+class BatchRunnerUnitTest1 {
+    @Test
+    fun addition_isCorrect() {
+        assertEquals(4, 2 + 2)
+    }
+    // along with you tests
+}
+
+```
+
+### For TestSuites
+
+```kotlin
+
+@RunWith(BatchSuite::class)
+@BatchSuite.SuiteClasses(
+    BatchRunnerUnitTest1::class,
+    BatchRunnerUnitTest2::class
+)
+class BatchSuiteRunner
+
+```
+
+### Gradle changes
+
+```kotlin
+
+android {
+    subprojects {
+        tasks.withType<Test> {
+            maxParallelForks = Runtime.getRuntime().availableProcessors()
+        }
+    }
+}
+
+```
+
+# Contribution, Issues or Future Ideas
+
+If part of BatchRunner is not working correctly be sure to file a Github issue. In the issue provide as
+many details as possible. This could include example code or the exact steps that you did so that
+everyone can reproduce the issue. Sample projects are always the best way :). This makes it easy for
+me or someone from the open-source community to start working!
+
+If you have a feature idea submit an issue with a feature request or submit a pull request and we
+will work with you to merge it in!
+
+## Contribution guidelines
+
+Contributions are more than welcome!
+- You should make sure that all the test are working properly.
+- You should raise a PR to `develop` branch
+- Before you raise a PR please make sure your code had no issue from Android studio lint analyzer.
+
+## Please Share & Star the repository to keep me motivated.
+  <a href = "https://github.com/iamjosephmj/BatchRunner/stargazers">
+     <img src = "https://img.shields.io/github/stars/iamjosephmj/BatchRunner" />
+  </a>
+  <a href = "https://twitter.com/iamjosephmj">
+     <img src = "https://img.shields.io/twitter/url?label=follow&style=social&url=https%3A%2F%2Ftwitter.com" />
+  </a>
+
+
