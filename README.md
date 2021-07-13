@@ -36,3 +36,34 @@
   </a>
 
 </div>
+
+
+## What is BatchRunner?
+
+<p>
+BatchRunner is a Junit plugin that is composed on top of Coroutines to bring parallelism to the UnitTests.
+With this plugin, you can leverage the maximum threads available in your machine (CI - Instance).
+<br/>
+BatchRunner also supports SuiteTests, in the sense that you will be able to run different test classes in the suite parallelly.
+<br/>
+</p>
+
+## Gradle
+
+Add the following to your project's root build.gradle file
+
+```groovy
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+```
+
+Add the following to your project's build.gradle file
+
+```kotlin
+dependencies {
+    implementation("com.github.iamjosephmj:BatchRunner:1.0.0")
+}
+```
