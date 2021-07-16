@@ -1,5 +1,6 @@
 /*
  * MIT License
+ *
  * Copyright (c) 2021 Joseph James
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,16 +22,34 @@
  * SOFTWARE.
  */
 
-package me.iamjosephmj.batchrunner
+package me.iamjosephmj.batchrunner.mokito
 
-import me.iamjosephmj.batchrunner.suite.BatchSuite
-import org.junit.runner.RunWith
+import org.junit.runner.Description
+import org.junit.runner.Runner
+import org.junit.runner.manipulation.Filter
+import org.junit.runner.manipulation.Filterable
+import org.junit.runner.notification.RunNotifier
+import org.mockito.internal.runners.RunnerImpl
 
+/**
+ * Mockito Junit Runner class.
+ *
+ * @author Joseph James.
+ */
+class MockitoJUnitBatchRunner(klass: Class<*>) : Runner(), Filterable {
 
-@RunWith(BatchSuite::class)
-@BatchSuite.SuiteClasses(
-    BatchRunnerUnitTest1::class,
-    BatchRunnerUnitTest2::class,
-    MockitoJUnitBatchRunnerUnitTest::class
-)
-class BatchSuiteRunner
+    private val runner: RunnerImpl = BatchRunnerImpl(klass)
+
+    override fun run(notifier: RunNotifier?) {
+        runner.run(notifier)
+    }
+
+    override fun getDescription(): Description? {
+        return runner.description
+    }
+
+    override fun filter(filter: Filter?) {
+        //filter is required because without it UnrootedTests show up in Eclipse
+        runner.filter(filter)
+    }
+}
