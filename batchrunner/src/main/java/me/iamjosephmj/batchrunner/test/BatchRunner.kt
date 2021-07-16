@@ -33,6 +33,7 @@ import org.junit.runner.notification.RunNotifier
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 
+@Suppress("LeakingThis")
 open class BatchRunner(klass: Class<*>) :
     Runner(),
     Filterable,
@@ -96,7 +97,7 @@ open class BatchRunner(klass: Class<*>) :
         return getTestClass().getName()
     }
 
-    private fun createTest(): Any {
+    open fun createTest(): Any {
         return getTestClass().getConstructor().newInstance()
     }
 

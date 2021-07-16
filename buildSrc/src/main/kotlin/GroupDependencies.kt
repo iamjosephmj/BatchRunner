@@ -31,6 +31,7 @@ object GroupDependencies {
         appTest,
         test,
         "org.jetbrains.kotlin:kotlin-reflect:${Dependencies.reflect}",
+        "org.mockito:mockito-core:${Dependencies.mockito}"
     )
 
 

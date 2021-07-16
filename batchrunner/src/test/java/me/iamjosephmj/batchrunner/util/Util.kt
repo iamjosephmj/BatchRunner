@@ -1,5 +1,6 @@
 /*
  * MIT License
+ *
  * Copyright (c) 2021 Joseph James
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,16 +22,11 @@
  * SOFTWARE.
  */
 
-package me.iamjosephmj.batchrunner
+package me.iamjosephmj.batchrunner.util
 
-import me.iamjosephmj.batchrunner.suite.BatchSuite
-import org.junit.runner.RunWith
-
-
-@RunWith(BatchSuite::class)
-@BatchSuite.SuiteClasses(
-    BatchRunnerUnitTest1::class,
-    BatchRunnerUnitTest2::class,
-    MockitoJUnitBatchRunnerUnitTest::class
-)
-class BatchSuiteRunner
+open class Util {
+    // method to be mocked.
+    open fun getTime(nothing:Int): Long {
+        return 1000000
+    }
+}
