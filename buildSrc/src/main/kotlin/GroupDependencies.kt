@@ -9,10 +9,6 @@ object GroupDependencies {
         "com.google.android.material:material:${Dependencies.material}"
     )
 
-    internal val batchLib = listOf(
-        "com.github.iamjosephmj:BatchRunner:${Dependencies.batchRunner}"
-    )
-
     internal val test = listOf(
         "junit:junit:${Dependencies.junit}"
     )

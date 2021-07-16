@@ -45,4 +45,5 @@ android {
 dependencies {
 
     getAppDependencies()
+    testImplementation("com.github.iamjosephmj:BatchRunner:1.0.1")
 }

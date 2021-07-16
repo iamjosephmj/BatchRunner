@@ -7,7 +7,7 @@ import org.junit.Assert.*
 import org.junit.runner.RunWith
 
 @RunWith(BatchRunner::class)
-class ExampleUnitTest {
+class BatchUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)

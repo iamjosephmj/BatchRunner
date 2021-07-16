@@ -6,7 +6,6 @@ fun DependencyHandler.getAppDependencies() {
     listOf(
         GroupDependencies.core,
         GroupDependencies.app,
-        GroupDependencies.batchLib,
     ).forEach { item ->
         item.forEach { dependency ->
             addApi(dependency)
