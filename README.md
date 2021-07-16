@@ -64,7 +64,7 @@ Add the following to your project's build.gradle file
 
 ```kotlin
 dependencies {
-    testImplementation("com.github.iamjosephmj:BatchRunner:1.0.0")
+    testImplementation("com.github.iamjosephmj:BatchRunner:1.0.1")
 }
 ```
 
