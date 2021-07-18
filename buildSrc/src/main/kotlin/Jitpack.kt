@@ -1,7 +1,7 @@
 object Jitpack {
     // app
-    const val versionCode = 2
-    const val versionName = "1.0.1"
+    const val versionCode = 3
+    const val versionName = "1.0.2"
 
     // release
     const val release = "release"
@@ -9,5 +9,5 @@ object Jitpack {
 
     const val groupId = "me.iamjosephmj"
     const val artifactId = "batchrunner"
-    const val version = "1.0.1"
+    const val version = "1.0.2"
 }

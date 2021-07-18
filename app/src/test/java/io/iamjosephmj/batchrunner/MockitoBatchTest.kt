@@ -9,7 +9,7 @@ import org.mockito.Mock
 import org.mockito.Mockito.`when`
 
 @RunWith(MockitoJUnitBatchRunner::class)
-class MockitoBatchTest {
+class MockitoBatchTest {    
 
     @Mock
     private lateinit var context: Context
