@@ -64,10 +64,6 @@ Add the following to your project's build.gradle file
 
 ```kotlin
 dependencies {
-    // Build based on Java_1.8
-    testImplementation("com.github.iamjosephmj:BatchRunner:1.0.2")
-    
-    // Build based on Java11
     testImplementation("com.github.iamjosephmj:BatchRunner:1.0.1")
 }
 ```
