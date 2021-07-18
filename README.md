@@ -41,7 +41,7 @@
 ## What is BatchRunner?
 
 <p>
-BatchRunner is a Junit plugin that is composed on top of Mockito and Coroutines to bring parallelism to the UnitTests.
+BatchRunner is a Junit plugin that is composed on top of Coroutines to bring parallelism to the UnitTests.
 With this plugin, you can leverage the maximum threads available in your machine (CI - Instance).
 <br/>
 BatchRunner also supports SuiteTests, in the sense that you will be able to run different test classes in the suite parallelly.
